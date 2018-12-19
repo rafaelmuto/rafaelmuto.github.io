@@ -13,53 +13,63 @@ window.onload = function() {
       cmd = cmd_line.value;
       print_line(cmd);
       cmd_line.value = '';
-
-      switch (cmd) {
-        case 'help':
-          print_line('=================');
-          print_line('List of Commands:');
-          print_line('=================');
-          print_line('CLS or CLEAR to clear screen.');
-          print_line('TIME for international UNIX time.');
-          print_line('LOREM for lorem ipsum test.');
-          print_line('RESET or RELOAD to reload the page.');
-          print_line('LS for a list of directories.')
-          break;
-
-        case 'clear':
-          print_out.innerHTML = '';
-          break;
-
-        case 'cls':
-          print_out.innerHTML = '';
-          break;
-
-        case 'time':
-          let d = new Date();
-          let time = d.getTime();
-          print_line('Its been ' + time + 'ms since midnight January 1, 1970.');
-          break;
-
-        case 'lorem':
-          print_line(lorem);
-          break;
-
-        case 'reset':
-          location.reload();
-          break;
-
-        case 'reload':
-          location.reload();
-          break;
-
-        default:
-          print_line('ERROR: ' + cmd + ' is not a command.')
-      }
-
+      loader(cmd);
     }
-
-
   });
+
+  function loader(string) {
+    switch (cmd) {
+      case 'help':
+        print_line('=================');
+        print_line('List of Commands:');
+        print_line('=================');
+        print_line('CLS or CLEAR to clear screen.');
+        print_line('TIME for standard UNIX time.');
+        print_line('LOREM for lorem ipsum test.');
+        print_line('RESET or RELOAD to reload the page.');
+        print_line('LS for a list of directories.')
+        break;
+
+      case 'about':
+        print_line('Desenvolvedor FullStack || fotografo || formado em arquitetura & urbanismo pela FAU-USP || trabalhando com fabricação digital || experimentando com linguagens digitais e eletrônica analógica ||  guitarrista amador || aprendendo o zen e a arte de manutenção de motocicletas.');
+        break;
+
+      case 'academics':
+        print_line('[2018] DigitalHouse São Paulo - Desenvolvedor FullStack');
+        print_line('[2011~2017] Faculdade de Arquitetura e Urbanismo na FAU-USP');
+        print_line('[2008~2011] Engenharia Civil na Escola Politécnica USP (EPUSP)');
+        break;
+
+      case 'clear':
+        print_out.innerHTML = '';
+        break;
+
+      case 'cls':
+        print_out.innerHTML = '';
+        break;
+
+      case 'time':
+        let d = new Date();
+        let time = d.getTime();
+        print_line('Its been ' + time + 'ms since midnight January 1, 1970.');
+        break;
+
+      case 'lorem':
+        print_line(lorem);
+        break;
+
+      case 'reset':
+        location.reload();
+        break;
+
+      case 'reload':
+        location.reload();
+        break;
+
+      default:
+        print_line('ERROR: ' + cmd + ' is not a command.')
+    }
+  }
 
   function print_line(string) {
     let line = document.createTextNode(string);
