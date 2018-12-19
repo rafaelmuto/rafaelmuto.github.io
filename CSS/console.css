@@ -12,13 +12,12 @@
 }
 
 body {
+  margin: 5px;
   background-color: black;
   background-image: radial-gradient(rgba(0, 150, 0, 0.5), black 120%);
   height: 100vh;
   color: var(--color_txt);
   text-shadow: 0 0 5px #C8C8C8;
-  display: grid;
-  grid-template-rows: 1fr var(--cmd_line_height);
 }
 
 body::after {
@@ -33,9 +32,8 @@ body::after {
 }
 
 .input {
+  margin-top: 3px;
   width: 100%;
-  position: absolute;
-  bottom: 0;
   display: grid;
   grid-template-columns: auto 1fr;
 }
@@ -56,7 +54,6 @@ body::after {
 }
 
 #print {
-  position: absolute;
   bottom: var(--cmd_line_height);
   display: grid;
   grid-template-columns: 1fr;
