@@ -3,18 +3,19 @@
 
   <head>
     <meta charset="utf-8">
-    <title>Portifolio Test</title>
-    <link rel="stylesheet" href="ring.css">
+    <title>console</title>
+    <link rel="stylesheet" href="CSS/console.css">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Press+Start+2P" rel="stylesheet">
   </head>
 
-  <body>
-    <div class="loader">
-      <span> </span>
-      <span> </span>
-      <span> </span>
-      <span> </span>
+  <body OnLoad="document.getElementById('cmd_line').focus();">
+    <div id="print" class="print">
+      <p>type HELP for list of commands...</p>
     </div>
-
+    <div class="input">
+      <label for="cmd_line">>></label> <input id="cmd_line" type="text" name="cmd_line" value="" autofocus>
+    </div>
   </body>
+  <script type="text/javascript" src="JS/console.js"></script>
 
 </html>

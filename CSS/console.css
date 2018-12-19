@@ -1,0 +1,70 @@
+:root {
+  --cmd_line_height: 1em;
+  --color_bg: #000000;
+  --color_txt: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Press Start 2P', monospace;
+  /* font-family: 'Major Mono Display', monospace; */
+}
+
+body {
+  background-color: black;
+  background-image: radial-gradient(rgba(0, 150, 0, 0.5), black 120%);
+  height: 100vh;
+  color: var(--color_txt);
+  text-shadow: 0 0 5px #C8C8C8;
+  display: grid;
+  grid-template-rows: 1fr var(--cmd_line_height);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: repeating-linear-gradient(rgba(0, 0, 0, 0.3), transparent 2px);
+  z-index: 100;
+}
+
+.input {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+#cmd_line {
+  background: transparent;
+  color: var(--color_txt);
+  width: 100%;
+  border: 0;
+  font-size: var(--cmd_line_height);
+  text-transform: lowercase;
+  text-shadow: 0 0 5px #C8C8C8;
+}
+
+#cmd_line:focus {
+  border: 0;
+  outline: 0;
+}
+
+#print {
+  position: absolute;
+  bottom: var(--cmd_line_height);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end;
+  grid-gap: 3px;
+}
+
+::selection {
+  background: #ffffff;
+  text-shadow: none;
+}
