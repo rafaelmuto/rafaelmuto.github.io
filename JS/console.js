@@ -31,10 +31,16 @@ window.onload = function() {
         break;
 
       case 'about':
+        print_line('=====');
+        print_line('ABOUT');
+        print_line('=====');
         print_line('Desenvolvedor FullStack || fotografo || formado em arquitetura & urbanismo pela FAU-USP || trabalhando com fabricação digital || experimentando com linguagens digitais e eletrônica analógica ||  guitarrista amador || aprendendo o zen e a arte de manutenção de motocicletas.');
         break;
 
       case 'academics':
+        print_line('=========');
+        print_line('ACADEMICO');
+        print_line('=========');
         print_line('[2018] DigitalHouse São Paulo - Desenvolvedor FullStack');
         print_line('[2011~2017] Faculdade de Arquitetura e Urbanismo na FAU-USP');
         print_line('[2008~2011] Engenharia Civil na Escola Politécnica USP (EPUSP)');
