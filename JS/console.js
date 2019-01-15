@@ -27,11 +27,26 @@ window.onload = function () {
 
       case 'cv':
         cmdLoader('about');
-        cmdLoader('academics');
-        cmdLoader('expant');
+        cmdLoader('academico');
+        cmdLoader('expereiencias');
+        cmdLoader('habilidades');
+        cmdLoader('extra');
+        cmdLoader('skills');
+        cmdLoader('contato');
         break;
 
       case 'help':
+        print_line('===========================');
+        print_line('CURRICULUN VITAE rafaelmuto');
+        print_line('===========================');
+        print_line('CV => exibir o cv completo');
+        print_line('ABOUT => sobre mim');
+        print_line('ACADEMICO => histórico academico');
+        print_line('EXPERIENCIAS => experiências anteriores');
+        print_line('HABILIDADES => habilidades complementares');
+        print_line('EXTRA => atividades extra-curriculares');
+        print_line('SKILLS => skills e hobbies');
+        print_line('CONTATO => infromações de contato');
         print_line('=================');
         print_line('List of Commands:');
         print_line('=================');
@@ -44,19 +59,19 @@ window.onload = function () {
         print_line('=====');
         print_line('ABOUT');
         print_line('=====');
-        print_line('Desenvolvedor fullstack com conhecimentos em HTML5, CSS3, JavaScript, PHP, SQL, JQuery e Laravel, recem formado na DigitalHouse SP. Graduado em arquitetura e urbanismo (FAU-USP),  z meu trabalho  nal na área de design paramétrico e fabricação digital aplicados ao design de mobiliário, onde utilizei ferramentas de programação e robotica na fabricação de mobiliários. Estudei e trabalhei com fotogra a, edição de video, marcenaria e design de mobiliário. Experiência com softwares de design e arquitetura (autoCAD, sketch-up, rhinoceros, grasshopper, fusion 360), modelagem 3d (blender), Photoshop, Indesign, Illustrator, Premiere, After E ects e Ligthroom.');
+        print_line('Desenvolvedor fullstack com conhecimentos em HTML5, CSS3, JavaScript, PHP, SQL, JQuery e Laravel, recem formado na DigitalHouse SP. Graduado em arquitetura e urbanismo (FAU-USP),  fiz meu trabalho  final na área de design paramétrico e fabricação digital aplicados ao design de mobiliário, onde utilizei ferramentas de programação e robotica na fabricação de mobiliários. Estudei e trabalhei com fotografia, edição de video, marcenaria e design de mobiliário. Experiência com softwares de design e arquitetura (autoCAD, sketch-up, rhinoceros, grasshopper, fusion 360), modelagem 3d (blender), Photoshop, Indesign, Illustrator, Premiere, After Effects e Ligthroom.');
         break;
 
-      case 'academics':
+      case 'academico':
         print_line('=========');
         print_line('ACADEMICO');
         print_line('=========');
         print_line('[2018] DigitalHouse São Paulo - Desenvolvedor FullStack');
-        print_line('[2011~2017] Faculdade de Arquitetura e Urbanismo na FAU-USP');
+        print_line('[2011~2017] Graduação em Arquitetura e Urbanismo na FAU-USP');
         print_line('[2008~2011] Engenharia Civil na Escola Politécnica USP (EPUSP)');
         break;
 
-      case 'expant':
+      case 'experiencias':
         print_line('=======================');
         print_line('EXPERIÊNCIAS ANTERIORES');
         print_line('=======================');
@@ -65,6 +80,44 @@ window.onload = function () {
         print_line('2012 - Dworecki Studio - assistente técnico');
         print_line('2010 - GAFISA S/A - estagiário em eng. civil');
         print_line('2007 - CSU Card System S/A - operador');
+        break;
+
+      case 'habilidades':
+        print_line('==========================');
+        print_line('HABILIDADES COMPLEMENTARES');
+        print_line('==========================');
+        print_line('Pro ciência em língua inglesa: TOEFL/IBT score: 103');
+        print_line('Curso de representação arquitetônica na ABRA (Academia Brasileira de Artes)');
+        print_line('Experiência com softwares de design, arquitetura e fotografia: Photoshop, Illustrator, InDesign, LightRoom, Premiere Pro, After Effects, AutoCAD, SketchUp e Rhino3D');
+        print_line('Conhecimentos avançados em fotogra a e video');
+        break;
+
+      case 'extra':
+        print_line('=============================');
+        print_line('ATIVIDADES EXTRA-CURRICULARES');
+        print_line('=============================');
+        print_line('Desde 2012 realiza workshops de fotogra a para os ingressantes na FAU-USP no início do ano.');
+        print_line('2010 - Projeto Bandeira Científica: projeto de ajuda a comunidades carentes realizado pela Faculdade de Medicina da USP em parceria com a Escola Politécnica');
+        break;
+
+      case 'skills':
+        print_line('================');
+        print_line('SKILLS & HOBBIES');
+        print_line('================');
+        print_line('HTML5, CSS3, JavaScript ES6, PHP, SQL, JQuery, Laravel 5, Python, Arduino');
+        print_line('AutoCad, Sketch-Up, Rhinoceros, Grasshopper, Blender');
+        print_line('Photoshop, Illustrator, InDesign, Premiere Pro, Lightroom');
+        print_line('Fotografía, Video, Fabricação Digital, Marcenaria, Eletronica');
+        break;
+
+      case 'contato':
+        print_line('=======');
+        print_line('CONTATO');
+        print_line('=======');
+        print_line('email: r.nagahama@gmail.com');
+        print_line('celular: +55 11 947 256 697');
+        print_line('GitHub: https://github.com/rafaelmuto');
+        print_line('portifolio: https://cargocollective.com/rafaelmuto');
         break;
 
       case 'clear':
