@@ -28,7 +28,7 @@ window.onload = function () {
       case 'cv':
         cmdLoader('about');
         cmdLoader('academico');
-        cmdLoader('expereiencias');
+        cmdLoader('experiencias');
         cmdLoader('habilidades');
         cmdLoader('extra');
         cmdLoader('skills');
@@ -148,6 +148,10 @@ window.onload = function () {
 
       case 'ln':
         print_line('LN' + ln);
+        break;
+
+      case 'ring':
+        location.assign('ring.html');
         break;
 
       default:
