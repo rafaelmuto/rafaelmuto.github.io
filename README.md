@@ -10,11 +10,11 @@ Desenvolvedor fullstack com conhecimentos em HTML5, CSS3, JavaScript, PHP, SQL, 
 - 2008~2011 Engenharia Civil na Escola Politécnica USP (EPUSP)
 
 ## EXPERIENCIAS ANTERIORES
-2017 - Estudio Flecha - estagio em design de moveis
-2014 - Imã Foto Galeria - edição de vídeo e mídia social
-2012 - Dworecki Studio - assistente técnico
-2010 - GAFISA S/A - estagiário em eng. civil
-2007 - CSU Card System S/A - operador
+- 2017 Estudio Flecha - estagio em design de moveis
+- 2014 Imã Foto Galeria - edição de vídeo e mídia social
+- 2012 Dworecki Studio - assistente técnico
+- 2010 GAFISA S/A - estagiário em eng. civil
+- 2007 CSU Card System S/A - operador
 
 ## HABILIDADES COMPLEMTARES
 - Proficiência em língua inglesa: TOEFL/IBT score: 103
