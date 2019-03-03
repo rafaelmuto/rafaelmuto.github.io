@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = () => {
   let cmd_line = document.getElementById('cmd_line');
   let print_out = document.getElementById('print');
   let input = document.getElementById('input');
@@ -6,6 +6,7 @@ window.onload = function () {
   var ln = 0;
 
   const lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+
 
   document.addEventListener('keydown', () => {
     cmd_line.focus();
@@ -22,6 +23,39 @@ window.onload = function () {
     }
   });
 
+
+  const print_line = (string) => {
+    ln++;
+    let line = document.createTextNode(string);
+    let new_line = document.createElement('p');
+    new_line.appendChild(line);
+    new_line.id = 'LN' + ln;
+    print_out.appendChild(new_line);
+    input.style.display = "grid";
+  };
+
+  const type_line = (string, cb) => {
+    ln++;
+    let new_line = document.createElement('p');
+    print_out.appendChild(new_line).id = 'LN' + ln;
+    new_line = document.getElementById('LN' + ln);
+    var i = 0;
+    let timer = setInterval(() => {
+      new_line.innerHTML = string.slice(0, i);
+      i++;
+      if (i > string.length) {
+        clearInterval(timer);
+        cb();
+      }
+    }, 10);
+  };
+
+  const returnInput = () => {
+    input.style.display = "grid";
+  }
+
+
+  // cmdLoader List:
   const cmdLoader = (string) => {
     switch (string) {
 
@@ -86,7 +120,7 @@ window.onload = function () {
         print_line('==========================');
         print_line('HABILIDADES COMPLEMENTARES');
         print_line('==========================');
-        print_line('Pro ciência em língua inglesa: TOEFL/IBT score: 103');
+        print_line('Proficiência em língua inglesa: TOEFL/IBT score: 103');
         print_line('Curso de representação arquitetônica na ABRA (Academia Brasileira de Artes)');
         print_line('Experiência com softwares de design, arquitetura e fotografia: Photoshop, Illustrator, InDesign, LightRoom, Premiere Pro, After Effects, AutoCAD, SketchUp e Rhino3D');
         print_line('Conhecimentos avançados em fotogra a e video');
@@ -159,35 +193,5 @@ window.onload = function () {
     }
   }
 
-
-  const print_line = (string) => {
-    ln++;
-    let line = document.createTextNode(string);
-    let new_line = document.createElement('p');
-    new_line.appendChild(line);
-    new_line.id = 'LN' + ln;
-    print_out.appendChild(new_line);
-    input.style.display = "grid";
-  }
-
-  const type_line = (string, cb) => {
-    ln++;
-    let new_line = document.createElement('p');
-    print_out.appendChild(new_line).id = 'LN' + ln;
-    new_line = document.getElementById('LN' + ln);
-    var i = 0;
-    let timer = setInterval(() => {
-      new_line.innerHTML = string.slice(0, i);
-      i++;
-      if (i > string.length) {
-        clearInterval(timer);
-        cb();
-      }
-    }, 10);
-  }
-
-  const returnInput = () => {
-    input.style.display = "grid";
-  }
 
 }
