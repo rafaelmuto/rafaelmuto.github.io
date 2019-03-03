@@ -33,7 +33,7 @@ Desenvolvedor fullstack com conhecimentos em HTML5, CSS3, JavaScript, PHP, SQL, 
 - Fotografía, Video, Fabricação Digital, Marcenaria, Eletronica
 
 ## CONTATO
-email: r.nagahama@gmail.com
-celular: +55 11 947 256 697
-GitHub: https://github.com/rafaelmuto
+email: r.nagahama@gmail.com  
+celular: +55 11 947 256 697  
+GitHub: https://github.com/rafaelmuto  
 portifolio: https://cargocollective.com/rafaelmuto
