@@ -77,12 +77,10 @@ window.onload = () => {
         break;
 
       case "con":
-        printer(
-          "email: r.nagahama@gmail.com" +
-            " mobile: +55 11 947 256 697" +
-            " GitHub: https://github.com/rafaelmuto" +
-            " portifolio: https://cargocollective.com/rafaelmuto"
-        );
+        printer("email: r.nagahama@gmail.com");
+        printer("mobile: +55 11 947 256 697");
+        printer("GitHub: https://github.com/rafaelmuto");
+        printer("portifolio: https://cargocollective.com/rafaelmuto");
         break;
 
       case "clear":
