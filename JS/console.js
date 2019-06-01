@@ -71,8 +71,8 @@ window.onload = () => {
         printer("List of Commands:");
         printer("CV => CURRICULUN VITAE rafaelmuto");
         printer("CON => contact info");
-        printer("CLS or CLEAR to clear screen.");
         printer("TIME for standard UNIX time.");
+        printer("CLS or CLEAR to clear screen.");
         printer("RESET or RELOAD to reload the page.");
         break;
 
@@ -87,10 +87,12 @@ window.onload = () => {
 
       case "clear":
         print_out.innerHTML = "";
+        input.style.display = "grid";
         break;
 
       case "cls":
         print_out.innerHTML = "";
+        input.style.display = "grid";
         break;
 
       case "time":
@@ -108,7 +110,8 @@ window.onload = () => {
         break;
 
       case "ln":
-        printer("LN" + ln);
+        let lnp = ln + 1;
+        printer("LN" + lnp);
         break;
 
       case "ring":
