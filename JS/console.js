@@ -55,7 +55,7 @@ window.onload = () => {
     });
 
     typer.then(res => {
-      console.log("restoring input field");
+      // console.log(res);
       input.style.display = "grid";
     });
   };
