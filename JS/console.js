@@ -115,6 +115,7 @@ window.onload = () => {
         break;
 
       case "ring":
+        printer("this is a colorfull ring...");
         location.assign("ring.html");
         break;
 
