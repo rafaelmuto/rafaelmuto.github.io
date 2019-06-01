@@ -79,9 +79,9 @@ window.onload = () => {
       case "con":
         printer(
           "email: r.nagahama@gmail.com" +
-            "mobile: +55 11 947 256 697" +
-            "GitHub: https://github.com/rafaelmuto" +
-            "portifolio: https://cargocollective.com/rafaelmuto"
+            " mobile: +55 11 947 256 697" +
+            " GitHub: https://github.com/rafaelmuto" +
+            " portifolio: https://cargocollective.com/rafaelmuto"
         );
         break;
 
