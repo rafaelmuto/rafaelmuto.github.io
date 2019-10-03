@@ -72,6 +72,7 @@ window.onload = () => {
         printer("CV => CURRICULUN VITAE rafaelmuto");
         printer("CON => contact info");
         printer("TIME for standard UNIX time.");
+        printer("CANNON => jogo do canhão");
         printer("CLS or CLEAR to clear screen.");
         printer("RESET or RELOAD to reload the page.");
         break;
@@ -110,6 +111,11 @@ window.onload = () => {
       case "ln":
         let lnp = ln + 1;
         printer("LN" + lnp);
+        break;
+
+      case "cannon":
+        printer("game...");
+        location.assign("cannon/index.html");
         break;
 
       case "ring":
