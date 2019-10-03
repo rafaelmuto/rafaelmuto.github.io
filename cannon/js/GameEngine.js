@@ -49,6 +49,8 @@ class GameEngine {
     // percorre todos os objetos
     // verifica se existe colissão entre os dois
     // chama o onCollide de ambos passando o objeto colidido
+    //loop do array de colides:
+    // para cadad elementeo chamar elemento.onColide(noemde do obejto para checar colisao)
   }
 
   render() {
