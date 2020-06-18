@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Press Start 2P', monospace;
+	/* font-family: 'Major Mono Display', monospace; */
+	/* font-family: monospace; */
+}
+
+table {
+	border: 1px solid black;
+}
+
+.pixel {
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: center;
+	position: relative;
+}
+
+.pixel-sm {
+	height: 5px;
+	width: 5px;
+}
+
+.pixel-lg {
+	height: 50px;
+	width: 50px;
+}
+
+.pixel-index {
+	font-size: 8px;
+	display: inline-block;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	color: #aaa;
+}
