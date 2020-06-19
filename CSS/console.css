@@ -34,12 +34,14 @@ body::after {
 
 .overlay {
 	/* background-color: black; */
-	height: 100%;
-	width: 100%;
+	top: -2%;
+	left: -2%;
+	height: 104%;
+	width: 104%;
 	z-index: 101;
 	position: fixed;
-	border: 1em solid black;
-	/* border-radius: 10% / 5%; */
+	border: 30px solid black;
+	border-radius: 8% / 10%;
 }
 
 .container {
