@@ -2,12 +2,22 @@ const INPUT = document.getElementById('input')
 const CMD_LINE = document.getElementById('cmd_line')
 const PRINT_OUT = document.getElementById('print')
 let LN = 0
-const PRINT_SPEED = 20
+let PRINT_SPEED = 20
 
 const FILES_LIST = {
     cv: {
         mockName: 'rafaelmuto.cv',
         link: 'Files/rafaelmuto_CV.pdf',
+        isHidden: false
+    },
+    github: {
+        mockName: 'rafaelmuto.github',
+        link: 'https://github.com/rafaelmuto',
+        isHidden: false
+    },
+    port: {
+        mockName: 'rafaelmuto.portfolio',
+        link: 'https://cargocollective.com/rafaelmuto',
         isHidden: false
     },
     ring: {
@@ -23,23 +33,23 @@ const FILES_LIST = {
     cannon: {
         mockName: 'cannon.game',
         link: 'cannon/index.html',
-        isHidden: false
-    }
+        isHidden: true
+    },
 }
 
 const COMMANDS_LIST = {
-    open: {
-        description: 'open file_name',
+    help: {
+        description: 'prints list of commands',
         isHidden: false,
-        return: (parameters = []) => {
-            console.log(parameters)
-            for (let [key, value] of Object.entries(FILES_LIST)) {
-                if (value.mockName == parameters[0]) {
-                    location.assign(value.link)
-                    return
+        return: () => {
+            let commands_list = []
+            for (let [key, value] of Object.entries(COMMANDS_LIST)) {
+                if (value.isHidden || value.isFile) {
+                    continue
                 }
+                commands_list.push(`${key} => ${value.description}`)
             }
-            return [`file ${parameters[0]} not found`]
+            return commands_list
         }
     },
     ls: {
@@ -56,27 +66,30 @@ const COMMANDS_LIST = {
             return files_list
         }
     },
-    help: {
-        description: 'prints list of commands',
-        isHidden: true,
-        return: () => {
-            let commands_list = []
-            for (let [key, value] of Object.entries(COMMANDS_LIST)) {
-                if (value.isHidden || value.isFile) {
-                    continue
+    open: {
+        description: 'open file_name',
+        isHidden: false,
+        return: (parameters = []) => {
+            for (let [key, value] of Object.entries(FILES_LIST)) {
+                if (value.mockName == parameters[0]) {
+                    location.assign(value.link)
+                    return [`opening file ${parameters[0]}...`]
                 }
-                commands_list.push(`${key} => ${value.description}`)
             }
-            return commands_list
+            return [`file ${parameters[0]} not found`]
         }
     },
-    time: {
-        description: 'prints time in miliseconds since UNIX time zero',
+    delete: {
+        description: 'delete file_name',
         isHidden: false,
-        return: () => {
-            let d = new Date();
-            let time = d.getTime();
-            return [`Its been ${time}ms since midnight January 1, 1970.`]
+        return: (parameters) => {
+            for (let [key, value] of Object.entries(FILES_LIST)) {
+                if (value.mockName == parameters[0]) {
+                    FILES_LIST[key].isHidden = true
+                    return [`file ${parameters[0]} deleted`]
+                }
+            }
+            return [`file ${parameters[0]} not found`]
         }
     },
     clear: {
@@ -102,9 +115,32 @@ const COMMANDS_LIST = {
             return ['LN' + (LN + 1)]
         }
     },
+    time: {
+        description: 'prints time in miliseconds since UNIX time zero',
+        isHidden: false,
+        return: () => {
+            let d = new Date();
+            let time = d.getTime();
+            return [`Its been ${time}ms since midnight January 1, 1970.`]
+        }
+    },
+    speed: {
+        description: 'set new typing delay in miliseconds',
+        isHidden: false,
+        return: (parameters) => {
+            const newSpeed = parseInt(parameters[0])
+            console.log(typeof (newSpeed))
+            console.log(newSpeed)
+            if (newSpeed < 0 || typeof (newSpeed) != 'number') {
+                return [`ERROR: ${newSpeed} not a valid speed`]
+            }
+            PRINT_SPEED = newSpeed
+            return [`printout speed set to ${newSpeed}`]
+        }
+    },
     lorem: {
         description: 'prints lorem ipsum',
-        isHidden: false,
+        isHidden: true,
         return: () => {
             return ['Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.']
         }
