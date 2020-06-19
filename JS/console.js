@@ -28,20 +28,23 @@ const FILES_LIST = {
 }
 
 const COMMANDS_LIST = {
-    test: {
-        description: 'description of the command goes here as a string',
-        isHidden: true,
-        isText: true,
-        return: [
-            'if isText is set to TRUE return is an array of strings to printout',
-            'if isText is set to FALSE return ia a function that may or maynot return an array of strings to printout and may or maynot recive parameters',
-            'if isHidden is set to TRUE this command will not appear in HELP command',
-        ],
+    open: {
+        description: 'open file_name',
+        isHidden: false,
+        return: (parameters = []) => {
+            console.log(parameters)
+            for (let [key, value] of Object.entries(FILES_LIST)) {
+                if (value.mockName == parameters[0]) {
+                    location.assign(value.link)
+                    return
+                }
+            }
+            return [`file ${parameters[0]} not found`]
+        }
     },
     ls: {
         description: 'lists all files available',
         isHidden: false,
-        isText: false,
         return: () => {
             let files_list = []
             for (let [key, value] of Object.entries(FILES_LIST)) {
@@ -56,7 +59,6 @@ const COMMANDS_LIST = {
     help: {
         description: 'prints list of commands',
         isHidden: true,
-        isText: false,
         return: () => {
             let commands_list = []
             for (let [key, value] of Object.entries(COMMANDS_LIST)) {
@@ -71,7 +73,6 @@ const COMMANDS_LIST = {
     time: {
         description: 'prints time in miliseconds since UNIX time zero',
         isHidden: false,
-        isText: false,
         return: () => {
             let d = new Date();
             let time = d.getTime();
@@ -81,7 +82,6 @@ const COMMANDS_LIST = {
     clear: {
         description: 'clear screen',
         isHidden: false,
-        isText: false,
         return: () => {
             PRINT_OUT.innerHTML = ''
             LN = 0
@@ -91,7 +91,6 @@ const COMMANDS_LIST = {
     reset: {
         description: 'reset system',
         isHidden: false,
-        isText: false,
         return: () => {
             location.reload()
         }
@@ -99,7 +98,6 @@ const COMMANDS_LIST = {
     ln: {
         description: 'print line number',
         isHidden: false,
-        isText: false,
         return: () => {
             return ['LN' + (LN + 1)]
         }
@@ -107,9 +105,17 @@ const COMMANDS_LIST = {
     lorem: {
         description: 'prints lorem ipsum',
         isHidden: false,
-        isText: true,
-        return: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.']
+        return: () => {
+            return ['Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.']
+        }
     },
+    contact: {
+        description: 'displays my contact info',
+        isHidden: false,
+        return: () => {
+            return ['email: r.nagahama@gmail.com', 'mobile: +55 11 947 256 697', 'GitHub: https://github.com/rafaelmuto', 'portifolio: https://cargocollective.com/rafaelmuto']
+        }
+    }
 }
 
 
@@ -160,18 +166,13 @@ const commandLoader = (command, parameter = []) => {
     if (!COMMANDS_LIST[command]) {
         output = [`ERROR: ${command} is not a command.`]
     } else {
-        if (COMMANDS_LIST[command].isText) {
-            output = COMMANDS_LIST[command].return
-        } else {
-            output = COMMANDS_LIST[command].return(parameter) ?? []
-        }
+        output = COMMANDS_LIST[command].return(parameter) ?? []
     }
     arrayPrinter(output)
 }
 
 const commandParser = (command) => {
-
-    const commandArray = command.split(' ')
+    const commandArray = command.toLowerCase().split(' ')
     const commandToRun = commandArray.shift()
     const parameters = commandArray
 
@@ -193,11 +194,11 @@ window.onload = () => {
 
     CMD_LINE.addEventListener('keydown', e => {
         if (e.key == 'Enter') {
-            cmd = CMD_LINE.value;
-            showExecutedLine(cmd);
-            CMD_LINE.value = '';
-            commandParser(cmd);
-            window.scrollTo(0, document.body.scrollHeight);
+            cmd = CMD_LINE.value.toLowerCase()
+            showExecutedLine(cmd)
+            CMD_LINE.value = ''
+            commandParser(cmd)
+            window.scrollTo(0, document.body.scrollHeight)
         }
     })
 }
