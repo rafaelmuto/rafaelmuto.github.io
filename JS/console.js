@@ -212,13 +212,6 @@ const commandParser = (command) => {
     const commandToRun = commandArray.shift()
     const parameters = commandArray
 
-    // paser the command lookin for extendend commands
-    // like OPEN somefile or DELETE somefile
-    // list of possible commands:
-    // OPEN
-    // DELETE
-    // SPEED
-
     commandLoader(commandToRun, parameters)
 }
 
