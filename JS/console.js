@@ -6,17 +6,17 @@ const PRINT_SPEED = 20
 
 const FILES_LIST = {
     cv: {
-        mockName: 'rafaelmuto_CV.pdf',
+        mockName: 'rafaelmuto.cv',
         link: 'Files/rafaelmuto_CV.pdf',
         isHidden: false
     },
     ring: {
-        mockName: 'color_ring.html',
+        mockName: 'color_ring.animation',
         link: 'HTML/ring.html',
         isHidden: false
     },
     fire: {
-        mockName: 'fire.html',
+        mockName: 'fire.hot',
         link: 'HTML/fire.html',
         isHidden: false
     },
