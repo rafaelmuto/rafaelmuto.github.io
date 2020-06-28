@@ -2,7 +2,7 @@ const INPUT = document.getElementById('input')
 const CMD_LINE = document.getElementById('cmd_line')
 const PRINT_OUT = document.getElementById('print')
 let LN = 0
-let PRINT_SPEED = 20
+let PRINT_SPEED = 10
 
 const FILES_LIST = {
     cv: {
@@ -128,14 +128,15 @@ const COMMANDS_LIST = {
         description: 'set new typing delay in miliseconds',
         isHidden: false,
         return: (parameters) => {
+            if (parameters.length == 0) {
+                return [`Current printout speed delay is ${PRINT_SPEED}`]
+            }
             const newSpeed = parseInt(parameters[0])
-            console.log(typeof (newSpeed))
-            console.log(newSpeed)
             if (newSpeed < 0 || typeof (newSpeed) != 'number') {
                 return [`ERROR: ${newSpeed} not a valid speed`]
             }
             PRINT_SPEED = newSpeed
-            return [`printout speed set to ${newSpeed}`]
+            return [`Printout speed set to ${newSpeed}`]
         }
     },
     lorem: {
@@ -223,7 +224,7 @@ window.onload = () => {
 
     CMD_LINE.addEventListener('keydown', e => {
         if (e.key == 'Enter') {
-            cmd = CMD_LINE.value.toLowerCase()
+            let cmd = CMD_LINE.value.toLowerCase()
             showExecutedLine(cmd)
             CMD_LINE.value = ''
             commandParser(cmd)

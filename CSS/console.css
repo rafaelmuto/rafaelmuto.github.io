@@ -8,8 +8,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Press Start 2P', monospace;
-	/* font-family: 'Major Mono Display', monospace; */
-	/* font-family: monospace; */
+	font-size: 10px;
 }
 
 body {
@@ -30,18 +29,6 @@ body::after {
 	height: 100vh;
 	background: repeating-linear-gradient(rgba(0, 0, 0, 0.3), transparent 2px);
 	z-index: 100;
-}
-
-.overlay {
-	/* background-color: black; */
-	top: -2%;
-	left: -2%;
-	height: 104%;
-	width: 104%;
-	z-index: 101;
-	position: fixed;
-	border: 30px solid black;
-	border-radius: 8% / 10%;
 }
 
 .container {
