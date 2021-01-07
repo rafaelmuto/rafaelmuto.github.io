@@ -35,6 +35,11 @@ const FILES_LIST = {
         link: 'cannon/index.html',
         isHidden: true
     },
+    bruxinha: {
+        mockName: 'bruxinha',
+        link: 'gigi/gigi.html',
+        isHidden: true
+    }
 }
 
 const COMMANDS_LIST = {

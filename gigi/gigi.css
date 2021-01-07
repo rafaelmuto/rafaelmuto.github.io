@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background: #ffffff;
+
+	font-family: 'Special Elite', cursive;
+}
+
+.container {
+	width: 600px;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	padding: 1em;
+
+	text-align: center;
+}
+
+.counter {
+	position: relative;
+	top: 0.1em;
+	font-size: 20em;
+}
+
+h1 {
+	padding: 0;
+	margin-bottom: 0;
+}
+
+.post {
+	top: -3em;
+	position: relative;
+}
+
+hr {
+	border-top: 1px dashed #8c8b8b;
+}
