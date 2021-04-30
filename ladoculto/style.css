@@ -69,6 +69,7 @@ a {
 
 @media only screen and (max-width: 900px) {
 	.main {
+		margin: 0;
 		width: auto;
 		padding: 20px 0;
 		display: block;
