@@ -66,3 +66,47 @@ a {
 .bio {
 	padding: 10px;
 }
+
+@media only screen and (max-width: 900px) {
+	.main {
+		width: auto;
+		padding: 20px 0;
+		display: block;
+	}
+
+	#logo {
+		width: auto;
+	}
+
+	.nav {
+		font-size: 14px;
+	}
+
+	.comic_frame {
+		white-space: nowrap;
+		overflow-x: scroll;
+		text-align: left;
+	}
+
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	.comic {
+		width: 1080px;
+	}
+
+	.nav_comic {
+		font-size: 16px;
+		display: flex;
+		width: auto;
+		justify-content: space-between;
+		padding-bottom: 20px;
+	}
+
+	.texts {
+		font-size: 14px;
+		padding: 20px;
+		display: block;
+	}
+}
