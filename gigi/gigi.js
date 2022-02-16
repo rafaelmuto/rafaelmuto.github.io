@@ -30,8 +30,8 @@ document.getElementById('b_day').innerHTML = dateTodayDiffThisYearInDays(b_date)
 document.getElementById('text').innerHTML =
     'Há ' +
     dateDiffInDays(first_date, today) +
-    ' dias atras nos achamos nesse mundo. E nos declaramos pela primeira vez a ' +
+    ' dias atrás nos achamos nesse mundo. E nos declaramos pela primeira vez há ' +
     dateDiffInDays(first_ily_date, today) +
-    ' E já fazem ' +
+    ' E já faz ' +
     dateDiffInDays(ani_date, today) +
-    ' dias que dormimos juntinhos...'
+    ' dias que dormimos juntinhos todas as noites...'

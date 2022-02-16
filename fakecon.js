@@ -1,3 +1,5 @@
+// TODO: finish this refactor pls...
+
 console.log('fakeCon online...')
 
 export default class FakeCon {
