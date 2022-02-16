@@ -1,5 +1,5 @@
 :root {
-	--cmd_line_height: 1em;
+	--cmd_line_height: 1rem;
 	--color_txt: #ffffff;
 }
 
@@ -8,7 +8,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Press Start 2P', monospace;
-	font-size: 10px;
+	font-size: var(--cmd_line_height);
 }
 
 body {
@@ -20,7 +20,7 @@ body {
 	text-shadow: 0 0 5px #c8c8c8;
 }
 
-body::after {
+/* body::after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -29,10 +29,19 @@ body::after {
 	height: 100vh;
 	background: repeating-linear-gradient(rgba(0, 0, 0, 0.3), transparent 2px);
 	z-index: 100;
+} */
+
+a {
+	color: var(--color_txt)
+}
+
+.pre {
+	width: 70%;
 }
 
 .container {
 	padding: 2em;
+	font-size: var(--cmd_line_height);
 }
 
 .input {

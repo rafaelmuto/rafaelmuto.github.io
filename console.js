@@ -6,32 +6,32 @@ let PRINT_SPEED = 10
 
 const FILES_LIST = {
     cv: {
-        mockName: 'rafaelmuto.cv',
-        link: 'Files/rafaelmuto_CV.pdf',
+        mockName: 'cv',
+        link: 'README.md',
         isHidden: false
     },
     github: {
-        mockName: 'rafaelmuto.github',
+        mockName: 'github',
         link: 'https://github.com/rafaelmuto',
         isHidden: false
     },
     port: {
-        mockName: 'rafaelmuto.portfolio',
+        mockName: 'portfolio',
         link: 'https://cargocollective.com/rafaelmuto',
         isHidden: false
     },
     ring: {
-        mockName: 'color_ring.animation',
+        mockName: 'color_ring',
         link: 'HTML/ring.html',
         isHidden: false
     },
     fire: {
-        mockName: 'fire.hot',
+        mockName: 'fire',
         link: 'HTML/fire.html',
         isHidden: false
     },
     cannon: {
-        mockName: 'cannon.game',
+        mockName: 'game',
         link: 'cannon/index.html',
         isHidden: true
     },
@@ -189,6 +189,8 @@ const stringTyper = (string) => {
                 clearInterval(timer)
                 resolve()
             }
+
+            window.scrollTo(0, document.body.scrollHeight)
         }, PRINT_SPEED)
     })
 }
