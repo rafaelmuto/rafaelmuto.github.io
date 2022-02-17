@@ -32,6 +32,6 @@ document.getElementById('text').innerHTML =
     dateDiffInDays(first_date, today) +
     ' dias nos achamos nesse mundo. E nos declaramos pela primeira vez há ' +
     dateDiffInDays(first_ily_date, today) +
-    ' E já faz ' +
+    '. E já faz ' +
     dateDiffInDays(ani_date, today) +
     ' dias que dormimos juntinhos todas as noites...'
