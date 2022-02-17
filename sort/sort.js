@@ -15,12 +15,10 @@ function start() {
 
     // const GRAPH_ARRAY = createInverseArray(ARRAY_SIZE)
 
-    console.log(GRAPH_ARRAY)
-
     updateGraph(GRAPH_ARRAY, context)
 }
 
-function selectionSort(array) {
+async function selectionSort(array) {
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array.length; j++) {
             if (array[i] < array[j]) {
