@@ -22,12 +22,12 @@ const FILES_LIST = {
     },
     ring: {
         mockName: 'color_ring',
-        link: 'HTML/ring.html',
+        link: 'ring/ring.html',
         isHidden: false
     },
     fire: {
         mockName: 'fire',
-        link: 'HTML/fire.html',
+        link: 'fire/fire.html',
         isHidden: false
     },
     cannon: {
@@ -36,7 +36,7 @@ const FILES_LIST = {
         isHidden: true
     },
     bruxinha: {
-        mockName: 'bruxinha',
+        mockName: 'gigi',
         link: 'gigi/gigi.html',
         isHidden: true
     }
