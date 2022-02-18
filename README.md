@@ -18,11 +18,6 @@ Experiência com arquitetura de micro serviços, deploiados em Docker.
 
 Me graduei em arquitetura e urbanismo (FAU-USP), fiz meu trabalho final na área de design paramétrico e fabricação digital aplicados ao design de mobiliário, onde utilizei ferramentas de programação e robotica na fabricação de mobiliários. Estudei e trabalhei com fotografia, edição de video, marcenaria, design de mobiliário e hoje me dedico a programação voltada para web.
 
-## ACADEMICO 
-- 2018 DigitalHouse São Paulo - Desenvolvedor FullStack
-- 2011~2017 Graduação em Arquitetura e Urbanismo na FAU-USP
-- 2008~2011 Engenharia Civil na Escola Politécnica USP (EPUSP)
-
 ## EXPERIENCIAS ANTERIORES
 - 2019 4YOU2 Idiomas - desenvolvedor - Backend (PHP/NODE) Frontend (REACT) e treinamento de novos membros
 - 2018 Madeira Design - designer e coordenador de projetos
@@ -32,6 +27,11 @@ Me graduei em arquitetura e urbanismo (FAU-USP), fiz meu trabalho final na áre
 - 2010 GAFISA S/A - estagiário em eng. civil
 - 2007 CSU Card System S/A - operador
 
+## ACADEMICO 
+- 2018 DigitalHouse São Paulo - Desenvolvedor FullStack
+- 2011~2017 Graduação em Arquitetura e Urbanismo na FAU-USP
+- 2008~2011 Engenharia Civil na Escola Politécnica USP (EPUSP)
+
 ## HABILIDADES COMPLEMTARES
 - Proficiência em língua inglesa: TOEFL/IBT score: 103
 - Curso de representação arquitetônica na ABRA (Academia Brasileira de Artes)
@@ -39,7 +39,7 @@ Me graduei em arquitetura e urbanismo (FAU-USP), fiz meu trabalho final na áre
 - Conhecimentos avançados em fotografia e video.
 
 ## ATIVIDADES EXTRA-CURRICULARES
-- 2012~2016 realizei workshops de fotogra a para os ingressantes na FAU-USP no início do ano.
+- 2012~2016 realizei workshops de fotogra e laboratório para os ingressantes da FAU-USP.
 - 2010 - Projeto Bandeira Científica: projeto de ajuda a comunidades carentes realizado pela Faculdade de Medicina da USP em parceria com a Escola Politécnica
 
 ## SKILLS & HOBBIES
