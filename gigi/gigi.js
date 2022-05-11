@@ -25,7 +25,11 @@ function dateTodayDiffThisYearInDays(date) {
 
     result = Math.floor((utc2 - utc1) / _MS_PER_DAY)
     
-    return result < 0 ? 365 + result : result
+    if(result < 0) {
+        return 365 + result
+    } else {
+        return result
+    }
 }
 
 document.getElementById('b_day').innerHTML = dateTodayDiffThisYearInDays(b_date)
