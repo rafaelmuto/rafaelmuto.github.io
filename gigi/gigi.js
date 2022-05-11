@@ -23,7 +23,9 @@ function dateTodayDiffThisYearInDays(date) {
     const utc1 = Date.UTC(this_year.getFullYear(), this_year.getMonth(), this_year.getDate())
     const utc2 = Date.UTC(this_year.getFullYear(), date.getMonth(), date.getDate())
 
-    return Math.floor((utc2 - utc1) / _MS_PER_DAY)
+    result = Math.floor((utc2 - utc1) / _MS_PER_DAY)
+    
+    return result < 0 ? 365 : result
 }
 
 document.getElementById('b_day').innerHTML = dateTodayDiffThisYearInDays(b_date)
