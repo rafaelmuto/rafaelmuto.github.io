@@ -1,6 +1,15 @@
 :root {
 	--cmd_line_height: 1rem;
 	--color_txt: #ffffff;
+
+	--pixeloverlay-itensity:0.03;          /*How intense the overlay should be. Float between 0 and 1, but recommended range is more between 0 and 0.3. Higher values makes startpage darker.*/
+	--pixeloverlay-resolution:1;          /*A multiplier for the "pixel effect" size. 1 is default, higher means "bigger" pixels. If you use non whole numbers the probability of moiré patterns forming (and looking badly) increases a lot.*/
+
+	--vignetteoverlay-intensity:0.5;      /*How intense the overlay should be. Float between 0 and 1, but recommended range is between 0 and 0.5. Higher values make the vignette much darker. */
+	--vignetteoverlay-size:30%;           /*How big the "radius" of the vignette should be. It is minimal at 0% and as big as the screen (and thus invisible) at 100%. Accepts % values. */
+
+	--crtoverlay-intensity:0.5;
+	--crtoverlay-resolution:3px;
 }
 
 * {
@@ -11,6 +20,39 @@
 	font-size: var(--cmd_line_height);
 }
 
+.pixel_overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	pointer-events: none;
+	background: repeating-linear-gradient(90deg,rgba(0, 0, 255, var(--pixeloverlay-itensity)),rgba(0, 0, 255, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*1px),rgba(255, 0, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*1px),rgba(255, 0, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*2px),rgba(0, 255, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*2px),rgba(0, 255, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*3px)),
+	repeating-linear-gradient(0deg,rgba(0, 0, 0, var(--pixeloverlay-itensity)),rgba(0, 0, 0, var(--pixeloverlay-itensity)) calc(var(--pixeloverlay-resolution)*1px), rgba(255, 255, 255, 0) 1px,rgba(255, 255, 255, 0) calc(var(--pixeloverlay-resolution)*3px));
+  }
+
+  .vignette_overlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	pointer-events: none;
+	background: radial-gradient(transparent,transparent var(--vignetteoverlay-size), rgba(0,0,0,var(--vignetteoverlay-intensity)));
+  }
+
+  .crt_overlay {
+	pointer-events: none;
+	/* content: ''; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: repeating-linear-gradient(rgba(0, 0, 0, var(--crtoverlay-intensity)), transparent var(--crtoverlay-resolution));
+	z-index: 100;
+  }
+
 body {
 	/* margin: 20px; */
 	background-color: black;
@@ -19,17 +61,6 @@ body {
 	color: var(--color_txt);
 	text-shadow: 0 0 5px #c8c8c8;
 }
-
-/* body::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background: repeating-linear-gradient(rgba(0, 0, 0, 0.3), transparent 2px);
-	z-index: 100;
-} */
 
 a {
 	color: var(--color_txt)
