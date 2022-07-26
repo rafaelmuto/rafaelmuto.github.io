@@ -60,6 +60,7 @@ body {
 	height: 100vh;
 	color: var(--color_txt);
 	text-shadow: 0 0 5px #c8c8c8;
+	overflow: hidden;
 }
 
 a {
