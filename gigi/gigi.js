@@ -10,34 +10,44 @@ const first_ily_date = new Date('01/01/2021')
 const ani_date = new Date('02/26/2021')
 
 
-function dateDiffInDays(a, b) {
-    const utc1 = Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())
-    const utc2 = Date.UTC(b.getFullYear(), b.getMonth(), b.getDate())
-
-    return Math.floor((utc2 - utc1) / _MS_PER_DAY)
-}
-
-function dateTodayDiffThisYearInDays(date) {
-    const this_year = new Date()
-
-    const utc1 = Date.UTC(this_year.getFullYear(), this_year.getMonth(), this_year.getDate())
-    const utc2 = Date.UTC(this_year.getFullYear(), date.getMonth(), date.getDate())
-
-    result = Math.floor((utc2 - utc1) / _MS_PER_DAY)
-    
-    if(result < 0) {
-        return 365 + result
-    } else {
-        return result
+function getDaysDifference(startDate, endDate) {
+    // Calculate the time difference in milliseconds
+    const timeDiff = endDate.getTime() - startDate.getTime();
+  
+    // Convert milliseconds to days
+    const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+  
+    // Factor in leap years
+    const leapYears = countLeapYears(startDate, endDate);
+    const adjustedDaysDiff = daysDiff - leapYears;
+  
+    return adjustedDaysDiff;
+  }
+  
+  function countLeapYears(startDate, endDate) {
+    let count = 0;
+    for (let year = startDate.getFullYear(); year <= endDate.getFullYear(); year++) {
+      if (isLeapYear(year)) {
+        count++;
+      }
     }
-}
+    return count;
+  }
+  
+  function isLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  }
 
-document.getElementById('b_day').innerHTML = dateTodayDiffThisYearInDays(b_date)
+
+
+
+document.getElementById('b_day').innerHTML = getDaysDifference(b_date, today)
+
 document.getElementById('text').innerHTML =
     'Há ' +
-    dateDiffInDays(first_date, today) +
+    getDaysDifference(first_date, today) +
     ' dias nos achamos nesse mundo. E nos declaramos pela primeira vez há ' +
-    dateDiffInDays(first_ily_date, today) +
+    getDaysDifference(first_ily_date, today) +
     '. E já faz ' +
-    dateDiffInDays(ani_date, today) +
+    getDaysDifference(ani_date, today) +
     ' dias que dormimos juntinhos todas as noites...'
