@@ -52,7 +52,7 @@ function getNextGigiHappyDay() {
   }
 
 
-document.getElementById('b_day').innerHTML = getDaysDifference(getNextGigiHappyDay(), today)
+document.getElementById('b_day').innerHTML = getDaysDifference(today, getNextGigiHappyDay())
 
 document.getElementById('text').innerHTML =
     'Há ' +
