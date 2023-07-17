@@ -41,7 +41,7 @@ function getDaysDifference(startDate, endDate) {
 
 
 
-document.getElementById('b_day').innerHTML = getDaysDifference(b_date, today)
+document.getElementById('b_day').innerHTML = getDaysDifference(b_date, today) + 1
 
 document.getElementById('text').innerHTML =
     'Há ' +
