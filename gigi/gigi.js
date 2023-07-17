@@ -35,21 +35,21 @@ function isLeapYear(year) {
     return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 }
 
-
-function getNextGigiHappyDay()
-{
-    let d = new Date()
-    let year = d.getFullYear()
-    let month = d.getMonth() + 1
-    let day = d.getDate()
-
-    if(month > 5  && day > 10) {
-        year++
-    } 
-
-    return new Date(year + '/' + month + '/' + day + 1)
-}
-
+function getNextGigiHappyDay() {
+    const today = new Date();
+    const birthDate = new Date('05/11/1991');
+    
+    // Set the birthdate for the current year
+    birthDate.setFullYear(today.getFullYear());
+    
+    // If the birthdate has already passed this year, set it for the next year
+    if (birthDate < today) {
+      birthDate.setFullYear(today.getFullYear() + 1);
+    }
+    
+    // Return the next birthday date
+    return birthDate;
+  }
 
 
 document.getElementById('b_day').innerHTML = getDaysDifference(getNextGigiHappyDay(), today)
