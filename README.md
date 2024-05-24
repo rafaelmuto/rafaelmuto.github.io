@@ -7,18 +7,16 @@
 | | | (_| | || (_| |  __/ | | | | | | |_| | || (_) |
 |_|  \__,_|_| \__,_|\___|_|_| |_| |_|\__,_|\__\___/ 
 ```
-FullStack Developer // Designer + Architect // Photographer
+BackEnd Developer // Designer + Architect // Photographer
 
 ## SUMARIO
-Desenvolvedor fullstack com experiência em PHP (Symfony, Laravel), Node (Express, Adonis.js), REACT, Modelagem de Banco de Dados (SQL e NoSQL) e Docker. Tem conhecimento de OOP, testes unitarios, aplicação de design patterns e boas praticas de código.
+Desenvolvedor BackEnd PHP, com experiência solida em Symfony e Laravel. Conhecimentos de OOP, TTD, Clean Code e Design Patterns.
+Tem experiência com tecnologias como Docker, Kubernetes, Redis, RabbitMQ, Nodejs e REACT. Atualmente vem se especializando na area de Arquitetura de Sistemas/Software, Testes (Unit e Funcional) e treinamento de equipes.
 
-Experiência no desenvolvimento do sistema de cobrança integrado a APIs de pagamento, API de emissão de notas ficais e envio de emails customizados. A aplicação era capaz de fazer splits de pagamentos entre a matriz e franqueados emitindo notas-fiscais individuais para as partes e em diferntes municipios e estados do Brasil.
-
-Experiência com arquitetura de micro serviços, deploiados em Docker.
-
-Me graduei em arquitetura e urbanismo (FAU-USP), fiz meu trabalho final na área de design paramétrico e fabricação digital aplicados ao design de mobiliário, onde utilizei ferramentas de programação e robotica na fabricação de mobiliários. Estudei e trabalhei com fotografia, edição de video, marcenaria, design de mobiliário e hoje me dedico a programação voltada para web.
+Graduado em arquitetura e urbanismo pela FAU-USP, teve seu trabalho final na área de design paramétrico e fabricação digital aplicados ao design de mobiliário, onde utilizou ferramentas de programação e robotica na fabricação de mobiliários. Estudou e trabalhou com fotografia, edição de video, marcenaria, design de mobiliário e hoje se dedica a programação voltada para web.
 
 ## EXPERIENCIAS ANTERIORES
+- 2022 Charlie Acomodações - desenvolvedor Sr. / tech lead
 - 2019 4YOU2 Idiomas - desenvolvedor - Backend (PHP/NODE) Frontend (REACT) e treinamento de novos membros
 - 2018 Madeira Design - designer e coordenador de projetos
 - 2017 Estudio Flecha - estagio em design de moveis
@@ -43,10 +41,11 @@ Me graduei em arquitetura e urbanismo (FAU-USP), fiz meu trabalho final na áre
 - 2010 - Projeto Bandeira Científica: projeto de ajuda a comunidades carentes realizado pela Faculdade de Medicina da USP em parceria com a Escola Politécnica
 
 ## SKILLS & HOBBIES
-- HTML5, CSS3, JavaScript ES6, Node.js, Express, AdonisJs, MongoDB, SQL, PHP, Symfony, Laravel, Python, Arduino
+- PHP, Testing, Docker, Kubernetes, Python, Javascript, SQL, MongoDB, Arduino, Godot
 - AutoCad, Sketch-Up, Rhinoceros, Grasshopper, Blender
 - Photoshop, Illustrator, InDesign, Premiere Pro, Lightroom
 - Fotografía, Video, Fabricação Digital, Marcenaria, Eletronica
+- Musica, Guitarra, Baixo, Sintetizadores, Samplers, MIDI
 
 ## CONTATO
 email: r.nagahama@gmail.com  
